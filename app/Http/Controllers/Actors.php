@@ -16,6 +16,7 @@ class Actors extends Controller
      */
     public function index($page = 1)
     {
+
         // this line use to get the API info and we have to deal with the config file
         $APIpopularActors = Http::withToken(config('services.tmdb.token'))
             ->get("https://api.themoviedb.org/3/person/popular?page=".$page)
